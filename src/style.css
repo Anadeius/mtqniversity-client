@@ -2,101 +2,73 @@ body {
     background-color: #424242;
 }
 
+.header {
+    grid-column: 3 / span 2;
+    justify-self: center;
+	align-self: center;
+	font-family: 'Clicker Script', cursive;
+	font-weight: 400;
+	font-size: 72px;
+	margin-bottom: 0;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 100px 1fr 1fr 1fr;
+    grid-template-rows: 100px 1fr;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     min-height: 100vh;
 }
 
-.header {
-    grid-column: 3 / span 2;
-    justify-self: center;
-    align-self: center;
+#aether {
+	display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    grid-column: 1 / span 3;
+	grid-row-start: 2;
+	align-self: start;
+	justify-self: center;
+}
+
+#primal {
+	display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    grid-column: 4 / span 3;
+	grid-row-start: 2;
+	align-self: start;
+	justify-self: center;
 }
 
 .requests {
-    display: flex;
-    justify-content: space-evenly;
-    grid-column: 2 / span 4;
-    grid-row-start: 2;
-    align-self: start;
-}
-
-.requestsOneLine {
-    display: flex;
-    justify-content: space-evenly;
-    grid-column:2 / span 4;
-    grid-row-start: 3;
-}
-
-.requestsMinimal {
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
     grid-column: 3 / span 3;
-    grid-row-start: 4;
+	grid-row-start: 2;
 }
+
 
 .requestTitle {
     font-family: "EB Garamond";
     font-size: 60px;
     font-weight: 400;
     text-align: center;
-}
-
-.requestTitleMinimal {
-    font-family: "EB Garamond";
-    font-size: 60px;
-    font-weight: 400;
-    text-align: center;
-    display: inline;
+	display: inline;
 }
 
 .requestSubTitle {
-    font-size: 48px;
-    display:block;
-}
-
-.requestSubTitleMinimal {
     font-size: 44px;
 }
 
-.request{
-    display: flex;
-    width: 300px;
-    height: 100px;
-}
-
-.requestOneLine {
-    display: flex;
-    width: 450px;
-    height: 100px;
-}
-
-.requestMinimal {
+.request {
     display: flex;
     height: 50px;
     margin-left: 15px;
 }
 
 .twitchName {
-    display: block;
-    font-family: "EB Garamond";
-    color: #212121;
-    font-size: 36px;
-    font-weight: 500;
-}
-
-.twitchNameOneLine {
-    font-family: "EB Garamond";
-    font-size: 32px;
-    font-weight: 400;
-}
-
-.twitchNameMinimal {
     display: inline-block;
     font-family: "EB Garamond";
     font-size: 32px;
@@ -105,20 +77,6 @@ body {
 }
 
 .characterName {
-    display: block;
-    font-family: "EB Garamond";
-    color: #212121;
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.characterNameOneLine {
-    font-family: "EB Garamond";
-    font-size: 28px;
-    font-weight: 400;
-}
-
-.characterNameMinimal {
     display: inline-block;
     font-family: "EB Garamond";
     font-size: 28px;
@@ -127,21 +85,6 @@ body {
 }
 
 .timestamp {
-    display: block;
-    font-family: "EB Garamond";
-    color: #212121;
-    font-size:16px;
-    font-weight:400;
-}
-
-.timestampOneLine {
-    display: block;
-    font-family: "EB Garamond";
-    font-size:20px;
-    font-weight:400;
-}
-
-.timestampMinimal {
     display: inline-block;
     font-family: "EB Garamond";
     font-size:20px;
@@ -149,17 +92,6 @@ body {
 }
 
 .roleIcon {
-    height: 75px;
-    width: 75px;
-    margin: 1em 0;
-}
-
-.roleIconOneLine {
-    height:75px;
-    width: 75px;
-}
-
-.roleIconMinimal {
     height:75px;
     width: 75px;
 }
@@ -178,13 +110,47 @@ body {
 
 .divider {
     border: solid 1px;
-    width: 600px;
+    width: 650px;
     margin-left: 40px;
 }
+
 
 .requestDivider {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
     margin-top: 15px;
+}
+
+.requestDivider:last-of-type {
+	height:0;
+}
+
+.react-tabs__tab-list {
+	border-bottom: unset;
+	display: flex;
+	justify-content: center;
+}
+
+.react-tabs__tab {
+	border-radius: unset;
+	border: unset;
+	font-family: "EB Garamond";
+	font-size: 24px;
+	font-weight: 500;
+	margin: 0 15px;
+	box-shadow: 0 17px 20px -11px rgba(0,0,0,1);
+	border: 1px solid;
+	border-radius: 5px;
+}
+
+.react-tabs__tab--selected {
+	border-radius: 5px;
+	background: #9E9E9E;
+}
+
+.delete {
+	margin: auto;
+	margin-top: 15px;
+	margin-right: 0;
 }

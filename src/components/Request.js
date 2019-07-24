@@ -1,18 +1,24 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import RoleIcon from './RoleIcon';
+import { MdDeleteForever } from 'react-icons/md';
 
 class Request extends Component {
   render() {
     const { role, twitchName, characterName, timestamp } = this.props;
       return (
-          <div className="request">
-            <RoleIcon role={role} />
-            <p className="info">
-              <span className="twitchName">{twitchName}</span>
-              <span className="characterName">{characterName}</span>
-              <span className="timestamp">{timestamp}</span>
-            </p>
-        </div>
+        <Fragment>
+            <div className="request">
+                <RoleIcon role={role} />
+                <p className="info">
+                    <span className="twitchName">{twitchName} &#183; </span>
+                    <span className="characterName">{characterName} &#183; </span>
+                    <span className="timestamp">{timestamp} </span>
+                </p>
+				<MdDeleteForever className="delete" size={35} />
+            </div>
+            <hr className="requestDivider" />
+			
+        </Fragment>
       );
     }
 }

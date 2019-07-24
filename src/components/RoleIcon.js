@@ -9,13 +9,13 @@ class RoleIcon extends Component {
         const role = this.props.role;
         let icon;
 
-        if (role === 'Healer'){
+        if (role === 'healer'){
             icon = <Healer className="roleIcon healer" />;
         }
-        else if (role === 'Damage'){
+        else if (role === 'damage'){
             icon = <Damage className="roleIcon damage" />;
         }
-        else if (role ==='Tank'){
+        else if (role ==='tank'){
             icon = <Tank className="roleIcon tank" />;
         }
 
