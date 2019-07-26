@@ -6,6 +6,7 @@ import './style.css';
 
 import Request from './components/Request';
 import RequestContainer from './components/RequestContainer';
+import NoRequests from './components/NoRequests';
 
 function App() {
   return (
@@ -154,6 +155,23 @@ function App() {
 					</section>
 				</section>
 
+		</TabPanel>
+		<TabPanel>
+		<section className="requests">
+			<section>
+				<h3 className="requestTitle">Titania Ex
+				</h3>
+				<hr className="divider" />
+				<NoRequests />
+			</section>
+		
+			<section>
+				<h3 className="requestTitle">Innocence EX
+				</h3>
+				<hr className="divider" />
+				<NoRequests />
+			</section>
+		</section>
 		</TabPanel>
 	</Tabs>
 	</section>

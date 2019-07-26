@@ -154,3 +154,22 @@ body {
 	margin-top: 15px;
 	margin-right: 0;
 }
+
+.noRequests {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	margin: 50px;
+}
+
+.frown {
+	fill: #272727;
+}
+
+.noRequestsText {
+	font-family: "EB Garamond";
+	font-size: 48px;
+	font-weight: 500;
+	color: #272727;
+}

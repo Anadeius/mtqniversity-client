@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ReactComponent as Loader } from '../img/loading.svg';
 import firestore from '../firebase';
 import Request from './Request';
+import NoRequests from './NoRequests';
 import moment from 'moment';
 
 class RequestContainer extends Component {
@@ -41,14 +42,23 @@ class RequestContainer extends Component {
 
     render() {
 		const { aether, primal } = this.state;
+		let aetherRequests, primalRequests;
 
-		let aetherRequests = Object.values(aether).map((request) => (
-			<Request role={request.role} twitchName={request.twitch} characterName={`${request.firstName} ${request.lastName}`} timestamp={moment.unix(request.timestamp.seconds).format("MMMM Do YYYY, H:mma")} />
-		));
+		if(Object.keys(aether).length > 0){
+			aetherRequests = Object.values(aether).map((request) => (
+				<Request role={request.role} twitchName={request.twitch} characterName={`${request.firstName} ${request.lastName}`} timestamp={moment.unix(request.timestamp.seconds).format("MMMM Do YYYY, H:mma")} />
+			));
+		} else {
+			aetherRequests = [ <NoRequests /> ];
+		}
 
-		let primalRequests = Object.values(primal).map((request) => (
-			<Request role={request.role} twitchName={request.twitch} characterName={`${request.firstName} ${request.lastName}`} timestamp={moment.unix(request.timestamp.seconds).format("MMMM Do YYYY, H:mma")} />
-		))
+		if(Object.keys(primal).length > 0){
+			primalRequests = Object.values(primal).map((request) => (
+				<Request role={request.role} twitchName={request.twitch} characterName={`${request.firstName} ${request.lastName}`} timestamp={moment.unix(request.timestamp.seconds).format("MMMM Do YYYY, H:mma")} />
+			));
+		} else {
+			primalRequests = [ <NoRequests /> ];
+		}
 
         return (
             <section id={this.props.datacenter}>
