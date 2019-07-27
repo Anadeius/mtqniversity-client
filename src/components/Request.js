@@ -4,11 +4,11 @@ import { MdDeleteForever } from 'react-icons/md';
 
 class Request extends Component {
   render() {
-    const { role, twitchName, characterName, timestamp } = this.props;
+    const { characterRole, twitchName, characterName, timestamp } = this.props;
       return (
         <Fragment>
             <div className="request">
-                <RoleIcon role={role} />
+                <RoleIcon characterRole={characterRole} />
                 <p className="info">
                     <span className="twitchName">{twitchName} &#183; </span>
                     <span className="characterName">{characterName} &#183; </span>

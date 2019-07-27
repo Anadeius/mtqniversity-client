@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { FaRegFrown } from 'react-icons/fa';
 
 class NoRequests extends Component {

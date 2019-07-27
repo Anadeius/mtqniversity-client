@@ -6,16 +6,16 @@ import { ReactComponent as Tank } from '../img/tank.svg';
 
 class RoleIcon extends Component {
     render() {
-        const role = this.props.role;
+        const characterRole = this.props.characterRole;
         let icon;
 
-        if (role === 'healer'){
+        if (characterRole === 'healer'){
             icon = <Healer className="roleIcon healer" />;
         }
-        else if (role === 'damage'){
+        else if (characterRole === 'damage'){
             icon = <Damage className="roleIcon damage" />;
         }
-        else if (role ==='tank'){
+        else if (characterRole ==='tank'){
             icon = <Tank className="roleIcon tank" />;
         }
 
